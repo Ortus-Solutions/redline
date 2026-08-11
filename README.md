@@ -1,5 +1,9 @@
 Redline is a pure Java library for manipulating RPM Package Manager packages. Currently the project supports reading and creating packages and has an included Ant task useful for integration with build systems.
 
+## Requirements
+
+Building Redline requires JDK 21 and Maven 3.9 or later.
+
 To use Redline include it as a Maven dependency:
 
 ```xml

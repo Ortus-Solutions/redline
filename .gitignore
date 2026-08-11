@@ -6,3 +6,4 @@ nbactions.xml
 /test-output
 *.iml
 .idea
+/.vscode
