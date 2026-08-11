@@ -55,4 +55,4 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_ACCESS_SECRET }}
           SOURCE_DIR: target/s3-upload/
-          DEST_DIR: cfmlprojects/redline/${{ steps.s3-artifact.outputs.folderName }}
+          DEST_DIR: ortussolutions/redline/${{ steps.s3-artifact.outputs.folderName }}
