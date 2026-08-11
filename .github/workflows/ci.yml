@@ -38,9 +38,9 @@ jobs:
       - name: Prepare S3 upload
         id: s3-artifact
         run: |
-          artifact="$(find target -maxdepth 1 -name 'redline-*-jar-with-dependencies.jar' -print -quit)"
-          test -n "$artifact"
-          version="$(basename "$artifact" -jar-with-dependencies.jar | sed 's/^redline-//')"
+          version="$(mvn --batch-mode help:evaluate -Dexpression=project.version -q -DforceStdout)"
+          artifact="target/redline-$version.jar"
+          test -f "$artifact"
           mkdir -p target/s3-upload
           cp "$artifact" target/s3-upload/
           echo "folderName=$version" >> "$GITHUB_OUTPUT"
